@@ -11,6 +11,11 @@ export default {
       options: ["black", "white"],
       control: { type: "select" },
       defaultValue: "white"
+    },
+    size: {
+      options: ["normal", "large"],
+      control: { type: "select" },
+      defaultValue: "normal"
     }
   }
 } as Meta;
