@@ -1,10 +1,15 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
+import { ComponentProps } from "react";
 
 import {{pascalCase name}} from ".";
 
 export default {
   title: "{{pascalCase name}}",
-  component: {{pascalCase name}}
+  component: {{pascalCase name}},
+  argTypes: {},
+  parameters: {
+    layout: "centered"
+  }
 } as Meta;
 
-export const Default: Story = () => <{{pascalCase name}} />;
+export const Basic: Story<ComponentProps<typeof {{pascalCase name}}>> = () => <{{pascalCase name}} />;
