@@ -17,9 +17,16 @@ export default {
       control: { type: "select" },
       defaultValue: "normal"
     }
+  },
+  parameters: {
+    layout: "centered"
   }
 } as Meta;
 
 export const Basic: Story<ComponentProps<typeof Logo>> = ({ ...props }) => (
   <Logo {...props} />
 );
+
+Basic.args = {
+  hideOnMobile: false
+};
