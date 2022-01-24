@@ -19,11 +19,11 @@ const wrapperModifiers = {
 
       svg {
         height: 4.5rem;
+        pointer-events: none;
       }
 
       .text {
         display: none;
-        pointer-events: none;
       }
     `}
   `
