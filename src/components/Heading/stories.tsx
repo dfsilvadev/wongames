@@ -13,6 +13,14 @@ export default {
     color: {
       options: ["black", "white"],
       control: { type: "select" }
+    },
+    size: {
+      options: ["small", "medium"],
+      control: { type: "select" }
+    },
+    lineColor: {
+      options: ["primary", "secondary"],
+      control: { type: "select" }
     }
   },
   parameters: {
@@ -27,6 +35,8 @@ export const Basic: Story<ComponentProps<typeof Heading>> = ({ ...props }) => (
 Basic.args = {
   children: "Most Populars",
   color: "white",
+  size: "medium",
+  lineColor: "primary",
   lineLeft: false,
   lineBottom: false
 };
