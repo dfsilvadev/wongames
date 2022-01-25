@@ -6,13 +6,18 @@ import Menu from ".";
 export default {
   title: "Menu",
   component: Menu,
-  args: {
-    variant: "string"
+  argTypes: {
+    username: {
+      control: {
+        type: "text"
+      }
+    }
+  },
+  parameters: {
+    layout: "fullscreen"
   }
 } as Meta;
 
-export const Basic: Story<ComponentProps<typeof Menu>> = () => <Menu />;
-
-Basic.parameters = {
-  layout: "fullscreen"
-};
+export const DesktopAndMobile: Story<ComponentProps<typeof Menu>> = ({
+  ...props
+}) => <Menu {...props} />;
