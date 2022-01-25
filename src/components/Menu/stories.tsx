@@ -18,6 +18,6 @@ export default {
   }
 } as Meta;
 
-export const DesktopAndMobile: Story<ComponentProps<typeof Menu>> = ({
+export const ResponsiveMenu: Story<ComponentProps<typeof Menu>> = ({
   ...props
 }) => <Menu {...props} />;

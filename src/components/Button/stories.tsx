@@ -35,7 +35,7 @@ export const WithIcon: Story<ComponentProps<typeof Button>> = ({
 }) => <Button {...props} />;
 
 WithIcon.args = {
-  size: "small",
+  size: "medium",
   children: "Buy now",
   icon: <AddShoppingCart />,
   fullWidth: false

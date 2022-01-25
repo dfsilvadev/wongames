@@ -9,13 +9,11 @@ export default {
   argTypes: {
     color: {
       options: ["black", "white"],
-      control: { type: "select" },
-      defaultValue: "white"
+      control: { type: "select" }
     },
     size: {
       options: ["normal", "large"],
-      control: { type: "select" },
-      defaultValue: "normal"
+      control: { type: "select" }
     }
   },
   parameters: {
@@ -23,10 +21,28 @@ export default {
   }
 } as Meta;
 
-export const Basic: Story<ComponentProps<typeof Logo>> = ({ ...props }) => (
+export const Desktop: Story<ComponentProps<typeof Logo>> = ({ ...props }) => (
   <Logo {...props} />
 );
 
-Basic.args = {
-  hideOnMobile: false
+Desktop.args = {
+  hideOnMobile: false,
+  color: "white",
+  size: "normal"
+};
+
+export const Mobile: Story<ComponentProps<typeof Logo>> = ({ ...props }) => (
+  <Logo {...props} />
+);
+
+Mobile.args = {
+  hideOnMobile: true,
+  color: "white",
+  size: "normal"
+};
+
+Mobile.parameters = {
+  viewport: {
+    defaultViewport: "mobile1"
+  }
 };

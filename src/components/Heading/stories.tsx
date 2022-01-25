@@ -28,11 +28,11 @@ export default {
   }
 } as Meta;
 
-export const Basic: Story<ComponentProps<typeof Heading>> = ({ ...props }) => (
-  <Heading {...props} />
-);
+export const ResponsiveHeading: Story<ComponentProps<typeof Heading>> = ({
+  ...props
+}) => <Heading {...props} />;
 
-Basic.args = {
+ResponsiveHeading.args = {
   children: "Most Populars",
   color: "white",
   size: "medium",

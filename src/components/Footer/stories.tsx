@@ -9,7 +9,7 @@ export default {
   argTypes: {}
 } as Meta;
 
-export const DesktopAndMobile: Story<ComponentProps<typeof Footer>> = () => (
+export const ResponsiveFooter: Story<ComponentProps<typeof Footer>> = () => (
   <div
     style={{
       maxWidth: "130rem",
