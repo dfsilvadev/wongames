@@ -40,3 +40,16 @@ WithIcon.args = {
   icon: <AddShoppingCart />,
   fullWidth: false
 };
+
+export const AsLink: Story<ComponentProps<typeof Button>> = ({ ...props }) => (
+  <Button {...props} />
+);
+
+AsLink.args = {
+  size: "medium",
+  children: "Buy now",
+  icon: "",
+  fullWidth: false,
+  as: "a",
+  href: "/link"
+};
