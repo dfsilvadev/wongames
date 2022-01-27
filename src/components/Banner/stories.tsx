@@ -18,6 +18,33 @@ export default {
   }
 } as Meta;
 
-export const Basic: Story<ComponentProps<typeof Banner>> = ({ ...props }) => (
-  <Banner {...props} />
+export const Default: Story<ComponentProps<typeof Banner>> = ({ ...props }) => (
+  <div style={{ maxWidth: "104rem", margin: "0 auto" }}>
+    <Banner {...props} />
+  </div>
 );
+
+export const WithRibbon: Story<ComponentProps<typeof Banner>> = ({
+  ...props
+}) => (
+  <div style={{ maxWidth: "104rem", margin: "0 auto" }}>
+    <Banner {...props} />
+  </div>
+);
+
+WithRibbon.args = {
+  ribbon: "20% OFF",
+  ribbonSize: "normal",
+  ribbonColor: "secondary"
+};
+
+WithRibbon.argTypes = {
+  ribbonSize: {
+    options: ["small", "normal", "large"],
+    control: { type: "select" }
+  },
+  ribbonColor: {
+    options: ["primary", "secondary"],
+    control: { type: "select" }
+  }
+};
