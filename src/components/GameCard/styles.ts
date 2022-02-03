@@ -12,6 +12,7 @@ export const Wrapper = styled.article`
 `;
 
 export const ImageBox = styled.div`
+  position: relative;
   height: 14rem;
   width: 100%;
   background: #f6f7f8;

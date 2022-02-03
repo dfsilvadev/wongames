@@ -19,14 +19,14 @@ export default {
     }
   },
   parameters: {
-    layout: "centered"
+    layout: "fullscreen"
   }
 } as Meta;
 
 export const Default: Story<ComponentProps<typeof GameCard>> = ({
   ...props
 }) => (
-  <div style={{ width: "30rem" }}>
+  <div style={{ width: "30rem", margin: "0 auto" }}>
     <GameCard {...props} />
   </div>
 );
