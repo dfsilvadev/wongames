@@ -2,6 +2,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { ComponentProps } from "react";
 
 import Highlight from ".";
+import item from "./mock";
 
 export default {
   title: "Highlight",
@@ -12,15 +13,7 @@ export default {
       control: { type: "select" }
     }
   },
-  args: {
-    title: "Read Dead it’s back",
-    subtitle: "Come see John’s new adventures",
-    backgroundImage: "/img/red-dead-img.jpg",
-    floatImage: "",
-    buttonLabel: "Buy now",
-    buttonLink: "/rdr2",
-    alignment: "right"
-  },
+  args: { ...item },
   parameters: {
     layout: "fullscreen"
   }
