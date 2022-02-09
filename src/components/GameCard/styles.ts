@@ -12,8 +12,8 @@ export const Wrapper = styled.article`
 `;
 
 export const ImageBox = styled.div`
+  min-height: 14rem;
   position: relative;
-  height: 14rem;
   width: 100%;
   background: #f6f7f8;
   background-image: linear-gradient(
@@ -30,7 +30,6 @@ export const ImageBox = styled.div`
     0% {
       background-position: -40rem 0;
     }
-
     100% {
       background-position: 40rem 0;
     }
