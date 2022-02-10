@@ -9,7 +9,7 @@ export default {
   component: GameCardSlider,
   args: {
     items,
-    color: "black"
+    color: "white"
   },
   argTypes: {
     color: {
