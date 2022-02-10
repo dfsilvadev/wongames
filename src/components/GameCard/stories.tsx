@@ -34,7 +34,7 @@ export const Default: Story<ComponentProps<typeof GameCard>> = ({
 export const WithRibbon: Story<ComponentProps<typeof GameCard>> = ({
   ...props
 }) => (
-  <div style={{ width: "30rem" }}>
+  <div style={{ width: "30rem", margin: "0 auto" }}>
     <GameCard {...props} />
   </div>
 );
