@@ -4,6 +4,5 @@ export default {
   backgroundImage: "/img/red-dead-img.jpg",
   floatImage: "",
   buttonLabel: "Buy now",
-  buttonLink: "/rdr2",
-  alignment: "right"
+  buttonLink: "/rdr2"
 };
