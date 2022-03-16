@@ -9,7 +9,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>React Avançado - Boilerplate</title>
+        <title>Wongames</title>
         <link rel="manifest" href="/manifest.json" />
         <link
           rel="shortcut icon"
