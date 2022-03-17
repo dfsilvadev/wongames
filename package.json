@@ -10,6 +10,7 @@
     "postinstall": "husky install",
     "test": "jest",
     "test:watch": "yarn test --watch",
+    "test:ci": "jest --runInBand",
     "generate": "yarn plop --plopfile generators/plopfile.js",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s ./public",
