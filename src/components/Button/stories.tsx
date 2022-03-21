@@ -5,7 +5,7 @@ import { ComponentProps } from "react";
 import Button from ".";
 
 export default {
-  title: "Button",
+  title: "Form/Button",
   component: Button,
   argTypes: {
     children: {

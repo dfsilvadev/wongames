@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import Radio from ".";
 
 export default {
-  title: "Radio",
+  title: "Form/Radio",
   component: Radio,
   argTypes: {
     labelColor: {

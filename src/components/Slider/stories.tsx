@@ -23,7 +23,7 @@ const horizontalSettings: Settings = {
 };
 
 export default {
-  title: "Slider",
+  title: "Slide/Slider",
   component: Slider,
   args: {
     settings: horizontalSettings

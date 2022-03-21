@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import Checkbox from ".";
 
 export default {
-  title: "Checkbox",
+  title: "Form/Checkbox",
   component: Checkbox,
   argTypes: {
     labelColor: {

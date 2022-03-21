@@ -5,7 +5,7 @@ import { ComponentProps } from "react";
 import TextField from ".";
 
 export default {
-  title: "TextField",
+  title: "Form/TextField",
   component: TextField,
   argTypes: {
     onInput: { action: "input" },
