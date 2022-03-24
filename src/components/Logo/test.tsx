@@ -4,6 +4,14 @@ import { renderWithTheme } from "../../utils/tests/helpers";
 import Logo from ".";
 
 describe("<Logo />", () => {
+  it("should render the logo with id passed", () => {
+    const { container } = renderWithTheme(<Logo id="logo" />);
+
+    expect(
+      container.querySelector("#linear_gradient_logo")
+    ).toBeInTheDocument();
+  });
+
   it("should render a white label by default", () => {
     renderWithTheme(<Logo />);
     expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyle({
