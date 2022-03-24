@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import Menu from ".";
 
 export default {
-  title: "Menu",
+  title: "Header/Menu",
   component: Menu,
   argTypes: {
     username: {

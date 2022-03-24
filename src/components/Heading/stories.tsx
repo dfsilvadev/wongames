@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import Heading from ".";
 
 export default {
-  title: "Heading",
+  title: "Body/Heading",
   component: Heading,
   argTypes: {
     children: {

@@ -5,7 +5,7 @@ import Highlight from ".";
 import item from "./mock";
 
 export default {
-  title: "Highlight",
+  title: "Body/Highlight",
   component: Highlight,
   argTypes: {
     alignment: {

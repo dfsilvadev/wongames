@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import Banner from ".";
 
 export default {
-  title: "Banner",
+  title: "Header/Banner",
   component: Banner,
   args: {
     img: "https://source.unsplash.com/user/willianjusten/1042x580",

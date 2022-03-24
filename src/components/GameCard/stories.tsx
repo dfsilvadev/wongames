@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import GameCard from ".";
 
 export default {
-  title: "GameCard",
+  title: "Body/GameCard",
   component: GameCard,
   args: {
     title: "Population Zero",

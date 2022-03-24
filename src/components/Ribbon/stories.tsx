@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import Ribbon from ".";
 
 export default {
-  title: "Ribbon",
+  title: "Body/Ribbon",
   component: Ribbon,
   argTypes: {
     color: {

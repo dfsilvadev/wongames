@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import MediaMatch from ".";
 
 export default {
-  title: "MediaMatch",
+  title: "Others/MediaMatch",
   component: MediaMatch,
   parameters: {
     layout: "centered"

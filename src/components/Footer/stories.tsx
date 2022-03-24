@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import Footer from ".";
 
 export default {
-  title: "Footer",
+  title: "Footer/Footer",
   component: Footer,
   argTypes: {}
 } as Meta;
