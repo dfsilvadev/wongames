@@ -9,6 +9,7 @@ export const Wrapper = styled.menu`
     position: relative;
   `}
 `;
+
 export const LogoWrapper = styled.div`
   ${media.lessThan("medium")`
     position: absolute;
@@ -32,6 +33,7 @@ export const MenuGroup = styled.div`
     flex-grow: 1;
     justify-content: flex-end;
     align-items: center;
+    z-index: ${theme.layers.menu} + 1;
 
     > div {
       margin-left: ${theme.spacings.xsmall};
@@ -42,8 +44,8 @@ export const MenuGroup = styled.div`
 export const MenuNav = styled.div`
   ${({ theme }) => css`
     ${media.greaterThan("medium")`
-      margin-left: ${theme.spacings.small}
-    `}
+			margin-left: ${theme.spacings.small};
+		`}
   `}
 `;
 
@@ -90,14 +92,18 @@ export const MenuFull = styled.nav<MenuFullProps>`
     flex-direction: column;
     justify-content: space-between;
     background: ${theme.colors.white};
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    transition: opacity 0.2s ease-in-out;
+    position: fixed;
+    z-index: ${theme.layers.menu};
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     height: 100vh;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out;
     opacity: ${isOpen ? 1 : 0};
     pointer-events: ${isOpen ? "all" : "none"};
-
+    visibility: ${isOpen ? "visible" : "hidden"};
     > svg {
       position: absolute;
       top: 0;
@@ -107,7 +113,6 @@ export const MenuFull = styled.nav<MenuFullProps>`
       width: 2.4rem;
       height: 2.4rem;
     }
-
     ${MenuNav} {
       display: flex;
       align-items: center;
@@ -115,15 +120,14 @@ export const MenuFull = styled.nav<MenuFullProps>`
       flex: 1;
       flex-direction: column;
     }
-
     ${MenuLink} {
       color: ${theme.colors.black};
       font-weight: ${theme.font.bold};
       font-size: ${theme.font.sizes.xlarge};
       margin-bottom: ${theme.spacings.small};
+      transform: ${isOpen ? "translateY(0)" : "translateY(3rem)"};
+      transition: transform 0.3s ease-in-out;
     }
-
-    ${MenuLink},
     ${RegisterBox} {
       transform: ${isOpen ? "translateY(0)" : "translateY(3rem)"};
       transition: transform 0.3s ease-in-out;
