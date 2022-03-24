@@ -1,0 +1,229 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormSignIn /> should render the form elements 1`] = `
+.c4 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.6rem;
+  background: #EAEAEA;
+  border-radius: 0.2rem;
+  padding: 0 1.6rem;
+  border: 0.2rem solid;
+  border-color: #EAEAEA;
+}
+
+.c2:focus-within {
+  box-shadow: 0 0 0.5rem #F231A5;
+}
+
+.c5 {
+  color: #030517;
+  font-family: Poppins,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
+  font-size: 1.6rem;
+  padding: 0.8rem 0;
+  background: transparent;
+  border: 0;
+  outline: none;
+  width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 2.2rem;
+  color: #8F8F8F;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.c3 > svg {
+  width: 100%;
+}
+
+.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: linear-gradient(180deg,#ff5f5f 0%,#f062c0 50%);
+  color: #FAFAFA;
+  border: 0;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 5rem;
+  padding: 0.8rem 4.8rem;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.c8:hover {
+  background: linear-gradient(180deg,#e35565 0%,#d958a6 50%);
+}
+
+.c0 .c1 {
+  margin: 0.8rem 0;
+}
+
+.c0 .c7 {
+  margin: 2.4rem auto 1.6rem;
+}
+
+.c9 {
+  font-size: 1.4rem;
+  color: #030517;
+  text-align: center;
+}
+
+.c9 a {
+  color: #3CD3C1;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.1rem solid #3CD3C1;
+  -webkit-transition: color,border,0.1s ease-in-out;
+  transition: color,border,0.1s ease-in-out;
+}
+
+.c9 a:hover {
+  color: #29b3a3;
+  border-bottom: 0.1rem solid #29b3a3;
+}
+
+.c6 {
+  display: block;
+  font-size: 1.4rem;
+  color: #030517;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+}
+
+.c6:hover {
+  color: #0f1971;
+}
+
+<section
+  class="c0"
+>
+  <form
+    action=""
+  >
+    <div
+      class="c1 "
+    >
+      <div
+        class="c2"
+      >
+        <div
+          class="c3"
+        >
+          <svg
+            aria-hidden="true"
+            class="c4"
+            fill="currentColor"
+            focusable="false"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              data-name="Layer 2"
+            >
+              <path
+                d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm-.67 2L12 10.75 5.67 6zM19 18H5a1 1 0 01-1-1V7.25l7.4 5.55a1 1 0 00.6.2 1 1 0 00.6-.2L20 7.25V17a1 1 0 01-1 1z"
+                data-name="email"
+              />
+            </g>
+          </svg>
+        </div>
+        <input
+          class="c5"
+          name="email"
+          placeholder="Email"
+          type="email"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="c1 "
+    >
+      <div
+        class="c2"
+      >
+        <div
+          class="c3"
+        >
+          <svg
+            aria-hidden="true"
+            class="c4"
+            fill="currentColor"
+            focusable="false"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"
+            />
+          </svg>
+        </div>
+        <input
+          class="c5"
+          name="password"
+          placeholder="Password"
+          type="password"
+          value=""
+        />
+      </div>
+    </div>
+    <a
+      class="c6"
+      href="#"
+    >
+      Forgot your password?
+    </a>
+    <button
+      class="c7 c8"
+    >
+      <span>
+        Sign in now
+      </span>
+    </button>
+    <div
+      class="c9"
+    >
+      Don’t have an account?
+       
+      <a
+        href="/sign-up"
+      >
+        Sign up
+      </a>
+    </div>
+  </form>
+</section>
+`;
