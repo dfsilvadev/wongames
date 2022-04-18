@@ -228,7 +228,7 @@ exports[`<Gallery /> should render thumbnails as buttons 1`] = `
               <img
                 alt="Thumb - Gallery Image 1"
                 role="button"
-                src="./img/games/cyberpunk-1.jpeg"
+                src="/img/games/cyberpunk-1.jpeg"
                 style="width: 100%; display: inline-block;"
                 tabindex="-1"
               />
@@ -245,7 +245,7 @@ exports[`<Gallery /> should render thumbnails as buttons 1`] = `
               <img
                 alt="Thumb - Gallery Image 2"
                 role="button"
-                src="./img/games/cyberpunk-2.jpeg"
+                src="/img/games/cyberpunk-2.jpeg"
                 style="width: 100%; display: inline-block;"
                 tabindex="-1"
               />
@@ -333,7 +333,7 @@ exports[`<Gallery /> should render thumbnails as buttons 1`] = `
                 <div>
                   <img
                     alt="Gallery Image 1"
-                    src="./img/games/cyberpunk-1.jpeg"
+                    src="/img/games/cyberpunk-1.jpeg"
                     style="width: 100%; display: inline-block;"
                     tabindex="-1"
                   />
