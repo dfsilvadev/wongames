@@ -6,7 +6,7 @@ import items from "./mock";
 import Gallery from ".";
 
 export default {
-  title: "Gallery",
+  title: "Game/Gallery",
   component: Gallery,
   args: { items },
   parameters: {

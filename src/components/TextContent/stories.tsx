@@ -6,7 +6,7 @@ import textMock from "./mock";
 import TextContent from ".";
 
 export default {
-  title: "TextContent",
+  title: "Game/TextContent",
   component: TextContent,
   args: textMock,
   parameters: {
