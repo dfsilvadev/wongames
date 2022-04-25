@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 import { Menu2 as MenuIcon } from "@styled-icons/remix-line/Menu2";
 import { ShoppingCart as ShoppingCartIcon } from "@styled-icons/material-outlined/ShoppingCart";
 import { Search as SearchIcon } from "@styled-icons/material-outlined/Search";
@@ -9,7 +10,6 @@ import Button from "components/Button";
 import MediaMatch from "components/MediaMatch";
 
 import * as S from "./styles";
-import Link from "next/link";
 
 type MenuProps = {
   username?: string;
@@ -27,12 +27,18 @@ const Menu = ({ username }: MenuProps) => {
       </MediaMatch>
 
       <S.LogoWrapper>
-        <Logo hideOnMobile aria-label="Won Games" />
+        <Link href="/" passHref>
+          <a>
+            <Logo hideOnMobile aria-label="Won Games" />
+          </a>
+        </Link>
       </S.LogoWrapper>
 
       <MediaMatch greaterThan="medium">
         <S.MenuNav>
-          <S.MenuLink href="#">Home</S.MenuLink>
+          <Link href="/" passHref>
+            <S.MenuLink>Home</S.MenuLink>
+          </Link>
           <S.MenuLink href="#">Expore</S.MenuLink>
         </S.MenuNav>
       </MediaMatch>
@@ -58,7 +64,9 @@ const Menu = ({ username }: MenuProps) => {
         <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
 
         <S.MenuNav>
-          <S.MenuLink href="#">Home</S.MenuLink>
+          <Link href="/" passHref>
+            <S.MenuLink>Home</S.MenuLink>
+          </Link>
           <S.MenuLink href="#">Expore</S.MenuLink>
 
           {!!username && (
