@@ -20,3 +20,17 @@ export default {
 export const Basic: Story<ComponentProps<typeof GameItem>> = ({ ...props }) => (
   <GameItem {...props} />
 );
+
+export const WithPayment: Story<ComponentProps<typeof GameItem>> = ({
+  ...props
+}) => <GameItem {...props} />;
+
+WithPayment.args = {
+  downloadLink: "http://link",
+  paymentInfo: {
+    flag: "mastercard",
+    img: "/img/master-card.png",
+    number: "**** **** **** 4326",
+    purchaseDate: "Purchase made on 07/20/2020 at 20:32"
+  }
+};

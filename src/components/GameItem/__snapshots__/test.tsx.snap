@@ -94,7 +94,6 @@ exports[`<GameItem /> should render the item 1`] = `
     >
       <img
         alt="Red Dead Redemption 2"
-        role="img"
         src="https://source.unsplash.com/user/willianjusten/151x70"
         title="Red Dead Redemption 2"
       />
