@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import GameItem from ".";
 
 export default {
-  title: "GameItem",
+  title: "My Cart/GameItem",
   component: GameItem,
   argTypes: {},
   args: {

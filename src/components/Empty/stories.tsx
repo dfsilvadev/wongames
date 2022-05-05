@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import Empty from ".";
 
 export default {
-  title: "Empty",
+  title: "Others/Empty",
   component: Empty,
   args: {
     title: "Your wishlist is empty",
