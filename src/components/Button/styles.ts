@@ -41,11 +41,17 @@ const wrapperModifiers = {
     &:hover {
       color: ${darken(0.1, theme.colors.primary)};
     }
+  `,
+  disabled: () => css`
+    &:disabled {
+      cursor: not-allowed;
+      filter: saturate(30%);
+    }
   `
 };
 
 export const Wrapper = styled.button<WrapperProps>`
-  ${({ theme, size, fullWidth, minimal, hasIcon }) => css`
+  ${({ theme, size, fullWidth, minimal, hasIcon, disabled }) => css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -61,6 +67,7 @@ export const Wrapper = styled.button<WrapperProps>`
     ${!!fullWidth && wrapperModifiers.fullWidth()}
     ${!!minimal && wrapperModifiers.minimal(theme)}
     ${!!hasIcon && wrapperModifiers.withIcon(theme)}
+    ${!!disabled && wrapperModifiers.disabled}
 
     &:hover {
       background: ${minimal
