@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import ProfileMenu from ".";
 
 export default {
-  title: "ProfileMenu",
+  title: "Profile/ProfileMenu",
   component: ProfileMenu,
   argTypes: {
     activeLink: {
@@ -25,7 +25,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{ maxWidth: "32rem", width: "100%" }}>
+      <div style={{ maxWidth: "32.5rem", width: "100%" }}>
         <Story />
       </div>
     )

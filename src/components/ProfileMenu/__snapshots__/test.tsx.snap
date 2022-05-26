@@ -16,6 +16,7 @@ exports[`<ProfileMenu /> should render the heading 1`] = `
 }
 
 .c1 {
+  font-size: 1.6rem;
   color: #030517;
   -webkit-text-decoration: none;
   text-decoration: none;

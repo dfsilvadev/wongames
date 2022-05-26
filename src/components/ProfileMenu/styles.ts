@@ -34,6 +34,7 @@ type MyLinkProps = {
 
 export const Link = styled.a<MyLinkProps>`
   ${({ theme, isActive }) => css`
+    font-size: ${theme.font.sizes.medium};
     color: ${theme.colors.black};
     text-decoration: none;
     display: flex;
