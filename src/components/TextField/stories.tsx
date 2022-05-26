@@ -13,8 +13,7 @@ export default {
   },
   args: {
     label: "E-mail",
-    labelFor: "Email",
-    id: "Email",
+    name: "email",
     initialValue: "",
     placeholder: "john.doe@gmail.com",
     disabled: false

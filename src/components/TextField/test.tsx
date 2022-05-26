@@ -9,7 +9,7 @@ import TextField from ".";
 describe("<TextField />", () => {
   it("should renders with label", () => {
     const { container } = renderWithTheme(
-      <TextField label="Label" labelFor="Field" id="Field" />
+      <TextField label="Label" name="Field" />
     );
 
     expect(screen.getByLabelText("Label")).toBeInTheDocument();
@@ -32,9 +32,7 @@ describe("<TextField />", () => {
   it("should changes its value when typing", async () => {
     const onInput = jest.fn();
 
-    renderWithTheme(
-      <TextField onInput={onInput} label="Label" labelFor="Label" id="Label" />
-    );
+    renderWithTheme(<TextField onInput={onInput} label="Label" name="Label" />);
 
     const input = screen.getByRole("textbox");
     const text = "This is my new text";
@@ -49,7 +47,7 @@ describe("<TextField />", () => {
   });
 
   it("should is accessible by tab", () => {
-    renderWithTheme(<TextField label="Label" labelFor="Label" id="Label" />);
+    renderWithTheme(<TextField label="Label" name="Label" />);
 
     const input = screen.getByLabelText("Label");
 
@@ -84,8 +82,7 @@ describe("<TextField />", () => {
       <TextField
         onInput={onInput}
         label="TextField"
-        labelFor="TextField"
-        id="TextField"
+        name="TextField"
         disabled
       />
     );
@@ -103,14 +100,7 @@ describe("<TextField />", () => {
   });
 
   it("should is not accessible by tab when disabled", () => {
-    renderWithTheme(
-      <TextField
-        label="TextField"
-        labelFor="TextField"
-        id="TextField"
-        disabled
-      />
-    );
+    renderWithTheme(<TextField label="TextField" name="TextField" disabled />);
 
     const input = screen.getByLabelText("TextField");
     expect(document.body).toHaveFocus();
@@ -124,7 +114,7 @@ describe("<TextField />", () => {
       <TextField
         icon={<EmailOutline data-testid="icon" />}
         label="TextField"
-        labelFor="TextField"
+        name="TextField"
         error="Error message"
       />
     );
