@@ -6,7 +6,7 @@ import CardList from ".";
 import cardsMock from "components/PaymentOptions/mock";
 
 export default {
-  title: "CardList",
+  title: "Profile/CardList",
   component: CardList,
   argTypes: {},
   args: {
