@@ -77,7 +77,7 @@ exports[`<Checkbox /> should be accessible with tab 1`] = `
   line-height: 1.8rem;
 }
 
-<section
+<div
   class="c0"
 >
   <input
@@ -93,5 +93,5 @@ exports[`<Checkbox /> should be accessible with tab 1`] = `
   >
     Checkbox
   </label>
-</section>
+</div>
 `;

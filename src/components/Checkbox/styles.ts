@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 import { CheckboxProps } from ".";
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
