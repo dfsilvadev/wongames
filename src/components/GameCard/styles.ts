@@ -27,7 +27,7 @@ export const ImageBox = styled.div`
   animation: placeholderShimmer 1s linear infinite forwards;
 
   img {
-    width: 100%;
+    object-fit: cover;
   }
 
   @keyframes placeholderShimmer {
