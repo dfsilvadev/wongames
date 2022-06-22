@@ -426,7 +426,7 @@ exports[`<Whishlist /> should render correctly 1`] = `
 }
 
 .c25 img {
-  width: 100%;
+  object-fit: cover;
 }
 
 .c26 {
