@@ -20,7 +20,6 @@ export const Content = styled.div`
     margin-top: ${theme.spacings.small};
     position: absolute;
     right: 0;
-    padding: 0 1rem;
 
     &::before {
       content: "";
