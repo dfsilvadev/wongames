@@ -32,3 +32,7 @@ export default {
 export const Basic: Story<ComponentProps<typeof CartDropdown>> = ({
   ...props
 }) => <CartDropdown {...props} />;
+
+export const Empty: Story<ComponentProps<typeof CartDropdown>> = () => (
+  <CartDropdown />
+);
