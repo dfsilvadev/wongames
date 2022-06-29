@@ -14,10 +14,21 @@ export default {
     }
   },
   parameters: {
-    layout: "fullscreen"
+    layout: "fullscreen",
+    backgrounds: {
+      default: "won-dark"
+    }
   }
 } as Meta;
 
 export const ResponsiveMenu: Story<ComponentProps<typeof Menu>> = ({
   ...props
 }) => <Menu {...props} />;
+
+export const Logged: Story<ComponentProps<typeof Menu>> = ({ ...props }) => (
+  <Menu {...props} />
+);
+
+Logged.args = {
+  username: "Daniel"
+};
