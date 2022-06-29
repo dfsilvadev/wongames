@@ -34,6 +34,9 @@ export default {
 export const Basic: Story<ComponentProps<typeof CartList>> = ({ ...props }) => (
   <CartList {...props} />
 );
+
 export const WithButton: Story<ComponentProps<typeof CartList>> = ({
   ...props
 }) => <CartList {...props} hasButton />;
+
+export const Empty: Story<ComponentProps<typeof CartList>> = () => <CartList />;
