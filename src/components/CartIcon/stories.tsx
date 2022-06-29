@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import CartIcon from ".";
 
 export default {
-  title: "CartIcon",
+  title: "Others/CartIcon",
   component: CartIcon,
   argTypes: {},
   args: {

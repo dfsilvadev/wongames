@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import Dropdown from ".";
 
 export default {
-  title: "Dropdown",
+  title: "Others/Dropdown",
   component: Dropdown,
   argTypes: {},
   args: {

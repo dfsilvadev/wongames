@@ -6,7 +6,7 @@ import CartDropdown from ".";
 import items from "components/CartList/mock";
 
 export default {
-  title: "CartDropdown",
+  title: "Others/CartDropdown",
   component: CartDropdown,
   argTypes: {},
   args: {
