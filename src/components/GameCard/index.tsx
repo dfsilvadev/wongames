@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Image from "next/image";
 import {
   AddShoppingCart,
   Favorite,
@@ -44,7 +45,7 @@ const GameCard = ({
         </Ribbon>
       )}
       <S.ImageBox>
-        <img src={img} alt={title} />
+        <Image src={img} alt={title} layout="fill" />
       </S.ImageBox>
 
       <S.Content>
