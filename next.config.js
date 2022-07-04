@@ -8,5 +8,8 @@ module.exports = {
   pwa: {
     dest: "public",
     disable: !isProd
+  },
+  images: {
+    domains: ["localhost"]
   }
 };
