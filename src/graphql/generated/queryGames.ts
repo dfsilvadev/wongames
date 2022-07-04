@@ -43,12 +43,12 @@ export interface queryGames_games_data_attributes {
   name: string;
   price: number;
   cover: queryGames_games_data_attributes_cover | null;
-  developers: queryGames_games_data_attributes_developers | null;
+  developers: queryGames_games_data_attributes_developers;
 }
 
 export interface queryGames_games_data {
   __typename: "GameEntity";
-  attributes: queryGames_games_data_attributes | null;
+  attributes: queryGames_games_data_attributes;
 }
 
 export interface queryGames_games {
