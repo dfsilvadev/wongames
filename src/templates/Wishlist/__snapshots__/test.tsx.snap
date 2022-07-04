@@ -556,10 +556,6 @@ exports[`<Whishlist /> should render correctly 1`] = `
   animation: placeholderShimmer 1s linear infinite forwards;
 }
 
-.c41 img {
-  object-fit: cover;
-}
-
 .c42 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1119,10 +1115,18 @@ exports[`<Whishlist /> should render correctly 1`] = `
           <div
             class="c41"
           >
-            <img
-              alt="Population Zero"
-              src="https://source.unsplash.com/user/willianjusten/300x140"
-            />
+            <span
+              style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
+            >
+              <img
+                alt="Population Zero"
+                data-nimg="fill"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+              <noscript />
+            </span>
           </div>
           <div
             class="c42"
@@ -1205,10 +1209,18 @@ exports[`<Whishlist /> should render correctly 1`] = `
           <div
             class="c41"
           >
-            <img
-              alt="Population Zero"
-              src="https://source.unsplash.com/user/willianjusten/300x141"
-            />
+            <span
+              style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
+            >
+              <img
+                alt="Population Zero"
+                data-nimg="fill"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+              <noscript />
+            </span>
           </div>
           <div
             class="c42"
@@ -1291,10 +1303,18 @@ exports[`<Whishlist /> should render correctly 1`] = `
           <div
             class="c41"
           >
-            <img
-              alt="Population Zero"
-              src="https://source.unsplash.com/user/willianjusten/300x142"
-            />
+            <span
+              style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
+            >
+              <img
+                alt="Population Zero"
+                data-nimg="fill"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+              <noscript />
+            </span>
           </div>
           <div
             class="c42"
