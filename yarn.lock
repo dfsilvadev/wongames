@@ -2946,6 +2946,14 @@
     "@babel/runtime" "^7.15.3"
     "@styled-icons/styled-icon" "^10.6.3"
 
+"@styled-icons/fa-brands@^10.38.0":
+  version "10.38.0"
+  resolved "https://registry.npmjs.org/@styled-icons/fa-brands/-/fa-brands-10.38.0.tgz#f4b6572c751409a62a3b5027e8d961e7dab7d33a"
+  integrity sha512-zZzGkcshXIF55geFIpMzMLH6tSPzQeeFPFZ1RMrZ3TWBjUuquMx+vYFsO7kzq939X84gLjmpkJZsAP9QKJFvMg==
+  dependencies:
+    "@babel/runtime" "^7.15.3"
+    "@styled-icons/styled-icon" "^10.6.3"
+
 "@styled-icons/material-outlined@^10.34.0":
   version "10.34.0"
   resolved "https://registry.npmjs.org/@styled-icons/material-outlined/-/material-outlined-10.34.0.tgz#5da422bc14dbc0ad0b4e7e15153056866f42f37b"
