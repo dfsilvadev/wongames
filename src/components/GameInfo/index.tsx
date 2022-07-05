@@ -1,5 +1,5 @@
-import { FavoriteBorder } from "styled-icons/material-outlined";
-import { AddShoppingCart } from "styled-icons/material-twotone";
+import { FavoriteBorder } from "@styled-icons/material-outlined";
+import { AddShoppingCart } from "@styled-icons/material-twotone";
 
 import Button from "components/Button";
 import Heading from "components/Heading";
