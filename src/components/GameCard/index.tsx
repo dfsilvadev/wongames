@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   AddShoppingCart,
   Favorite,
@@ -13,6 +14,7 @@ import Button from "components/Button";
 import * as S from "./styles";
 
 export type GameCardProps = {
+  slug: string;
   title: string;
   developer: string;
   img: string;
@@ -26,6 +28,7 @@ export type GameCardProps = {
 };
 
 const GameCard = ({
+  slug,
   title,
   developer,
   img,
@@ -44,15 +47,21 @@ const GameCard = ({
           {ribbon}
         </Ribbon>
       )}
-      <S.ImageBox>
-        <Image src={img} alt={title} layout="fill" />
-      </S.ImageBox>
+
+      <Link href={`game/${slug}`} passHref>
+        <S.ImageBox>
+          <Image src={img} alt={title} layout="fill" />
+        </S.ImageBox>
+      </Link>
 
       <S.Content>
-        <S.Info>
-          <S.Title>{title}</S.Title>
-          <S.Developer>{developer}</S.Developer>
-        </S.Info>
+        <Link href={`game/${slug}`} passHref>
+          <S.Info>
+            <S.Title>{title}</S.Title>
+            <S.Developer>{developer}</S.Developer>
+          </S.Info>
+        </Link>
+
         <S.FavButton role="button" onClick={onFav}>
           {favorite ? (
             <Favorite aria-label="Remove from Wishlist" />

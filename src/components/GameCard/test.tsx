@@ -5,6 +5,7 @@ import theme from "styles/theme";
 import GameCard from ".";
 
 const props = {
+  slug: "population-zero",
   title: "Population Zero",
   developer: "Gearbox Software",
   img: "https://source.unsplash.com/user/willianjusten/300x140",
@@ -12,8 +13,15 @@ const props = {
 };
 
 describe("<GameCard />", () => {
-  it("should render correctly", () => {
+  it("should render correctly", async () => {
     renderWithTheme(<GameCard {...props} />);
+
+    // await waitFor(() => {
+    //   expect(screen.getByRole("img", { name: props.title })).toHaveAttribute(
+    //     "src",
+    //     props.img
+    //   );
+    // });
 
     expect(
       screen.getByRole("heading", { name: props.title })
@@ -23,10 +31,10 @@ describe("<GameCard />", () => {
       screen.getByRole("heading", { name: props.developer })
     ).toBeInTheDocument();
 
-    // expect(screen.getByRole("img", { name: props.title })).toHaveAttribute(
-    //   "src",
-    //   props.img
-    // );
+    expect(screen.getByRole("link", { name: props.title })).toHaveAttribute(
+      "href",
+      `/game/${props.slug}`
+    );
 
     expect(screen.getByText(props.price)).toBeInTheDocument();
 
