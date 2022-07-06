@@ -575,6 +575,8 @@ exports[`<Whishlist /> should render correctly 1`] = `
 
 .c43 {
   max-width: calc(100% - 2.5rem);
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c44 {
@@ -1112,8 +1114,9 @@ exports[`<Whishlist /> should render correctly 1`] = `
         <article
           class="c40"
         >
-          <div
+          <a
             class="c41"
+            href="/game/undefined"
           >
             <span
               style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
@@ -1127,12 +1130,13 @@ exports[`<Whishlist /> should render correctly 1`] = `
               />
               <noscript />
             </span>
-          </div>
+          </a>
           <div
             class="c42"
           >
-            <div
+            <a
               class="c43"
+              href="/game/undefined"
             >
               <h3
                 class="c44"
@@ -1144,7 +1148,7 @@ exports[`<Whishlist /> should render correctly 1`] = `
               >
                 Rockstar Games
               </h4>
-            </div>
+            </a>
             <div
               class="c46"
               role="button"
@@ -1206,8 +1210,9 @@ exports[`<Whishlist /> should render correctly 1`] = `
         <article
           class="c40"
         >
-          <div
+          <a
             class="c41"
+            href="/game/undefined"
           >
             <span
               style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
@@ -1221,12 +1226,13 @@ exports[`<Whishlist /> should render correctly 1`] = `
               />
               <noscript />
             </span>
-          </div>
+          </a>
           <div
             class="c42"
           >
-            <div
+            <a
               class="c43"
+              href="/game/undefined"
             >
               <h3
                 class="c44"
@@ -1238,7 +1244,7 @@ exports[`<Whishlist /> should render correctly 1`] = `
               >
                 Rockstar Games
               </h4>
-            </div>
+            </a>
             <div
               class="c46"
               role="button"
@@ -1300,8 +1306,9 @@ exports[`<Whishlist /> should render correctly 1`] = `
         <article
           class="c40"
         >
-          <div
+          <a
             class="c41"
+            href="/game/undefined"
           >
             <span
               style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
@@ -1315,12 +1322,13 @@ exports[`<Whishlist /> should render correctly 1`] = `
               />
               <noscript />
             </span>
-          </div>
+          </a>
           <div
             class="c42"
           >
-            <div
+            <a
               class="c43"
+              href="/game/undefined"
             >
               <h3
                 class="c44"
@@ -1332,7 +1340,7 @@ exports[`<Whishlist /> should render correctly 1`] = `
               >
                 Rockstar Games
               </h4>
-            </div>
+            </a>
             <div
               class="c46"
               role="button"
