@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import { AccountCircle, Lock } from "styled-icons/material-outlined";
-import { EmailOutline } from "styled-icons/evaicons-outline";
+import { AccountCircle, Lock } from "@styled-icons/material-outlined";
+import { EmailOutline } from "@styled-icons/evaicons-outline";
 
 import { FormWrapper, FormLink } from "components/Form";
 import Button from "components/Button";
