@@ -2946,6 +2946,14 @@
     "@babel/runtime" "^7.15.3"
     "@styled-icons/styled-icon" "^10.6.3"
 
+"@styled-icons/evaicons-outline@^10.34.0":
+  version "10.34.0"
+  resolved "https://registry.npmjs.org/@styled-icons/evaicons-outline/-/evaicons-outline-10.34.0.tgz#a75c01763539a182834aefd6b60e9db0a45eef7b"
+  integrity sha512-ONPKJO+u3DB/rsCJdIKt6OBoKBvIvM/EsulxuWniRPPr0rR5lwueGocJpJmEUi+C4gsMllBSkcL5cOdFyd1Nbw==
+  dependencies:
+    "@babel/runtime" "^7.14.0"
+    "@styled-icons/styled-icon" "^10.6.3"
+
 "@styled-icons/fa-brands@^10.38.0":
   version "10.38.0"
   resolved "https://registry.npmjs.org/@styled-icons/fa-brands/-/fa-brands-10.38.0.tgz#f4b6572c751409a62a3b5027e8d961e7dab7d33a"
