@@ -7,6 +7,7 @@ export default {
   title: "Body/GameCard",
   component: GameCard,
   args: {
+    slug: "population-zero",
     title: "Population Zero",
     developer: "Gearbox Software",
     img: "https://source.unsplash.com/user/willianjusten/300x140",
