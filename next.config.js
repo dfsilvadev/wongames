@@ -10,6 +10,6 @@ module.exports = {
     disable: !isProd
   },
   images: {
-    domains: ["localhost"]
+    domains: ["localhost", "source.unsplash.com"]
   }
 };
