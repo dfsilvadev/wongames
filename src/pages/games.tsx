@@ -22,6 +22,7 @@ export async function getStaticProps() {
   });
 
   const games = data.games.data.map((game) => ({
+    slug: game.attributes.slug,
     title: game.attributes.name,
     developer: game.attributes.developers.data[0].attributes!.name,
     img: `http://localhost:1337${game.attributes.cover!.data?.attributes?.url}`,
