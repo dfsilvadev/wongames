@@ -2930,6 +2930,14 @@
     regenerator-runtime "^0.13.7"
     resolve-from "^5.0.0"
 
+"@styled-icons/bootstrap@^10.34.0":
+  version "10.34.0"
+  resolved "https://registry.npmjs.org/@styled-icons/bootstrap/-/bootstrap-10.34.0.tgz#d9142e9eb70dc437f7ef62ffc40168e1ae13ab12"
+  integrity sha512-UpzdVUR7r9BNqEfPrMchJdgMZEg9eXQxLQJUXM0ouvbI5o9j21/y1dGameO4PZtYbutT/dWv5O6y24z5JWzd5w==
+  dependencies:
+    "@babel/runtime" "^7.14.0"
+    "@styled-icons/styled-icon" "^10.6.3"
+
 "@styled-icons/boxicons-regular@^10.38.0":
   version "10.38.0"
   resolved "https://registry.npmjs.org/@styled-icons/boxicons-regular/-/boxicons-regular-10.38.0.tgz#1eb80b4f94a18a9b77b11dee5204aa23378d37ec"
