@@ -20,7 +20,7 @@ const GameInfo = ({ title, description, price }: GameInfoProps) => {
         {title}
       </Heading>
 
-      <Ribbon color="secondary">{`$${price}`}</Ribbon>
+      <Ribbon color="secondary">{`${price}`}</Ribbon>
 
       <S.Description>{description}</S.Description>
 
