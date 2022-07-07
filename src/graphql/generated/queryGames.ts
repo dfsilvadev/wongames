@@ -14,12 +14,12 @@ export interface queryGames_games_data_attributes_cover_data_attributes {
 
 export interface queryGames_games_data_attributes_cover_data {
   __typename: "UploadFileEntity";
-  attributes: queryGames_games_data_attributes_cover_data_attributes | null;
+  attributes: queryGames_games_data_attributes_cover_data_attributes;
 }
 
 export interface queryGames_games_data_attributes_cover {
   __typename: "UploadFileEntityResponse";
-  data: queryGames_games_data_attributes_cover_data | null;
+  data: queryGames_games_data_attributes_cover_data;
 }
 
 export interface queryGames_games_data_attributes_developers_data_attributes {
@@ -29,7 +29,7 @@ export interface queryGames_games_data_attributes_developers_data_attributes {
 
 export interface queryGames_games_data_attributes_developers_data {
   __typename: "DeveloperEntity";
-  attributes: queryGames_games_data_attributes_developers_data_attributes | null;
+  attributes: queryGames_games_data_attributes_developers_data_attributes;
 }
 
 export interface queryGames_games_data_attributes_developers {
@@ -42,7 +42,7 @@ export interface queryGames_games_data_attributes {
   slug: string;
   name: string;
   price: number;
-  cover: queryGames_games_data_attributes_cover | null;
+  cover: queryGames_games_data_attributes_cover;
   developers: queryGames_games_data_attributes_developers;
 }
 
