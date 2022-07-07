@@ -2,7 +2,6 @@ import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 
 import { initializeApollo } from "utils/apollo";
-import { formatCurrency } from "utils/formatCurrency";
 
 import Game, { GameTemplateProps } from "templates/Game";
 
@@ -67,7 +66,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       cover: `http://localhost:1337${game.attributes.cover.data.attributes.src}`,
       gameInfo: {
         title: game.attributes.name,
-        price: formatCurrency(game.attributes.price),
+        price: game.attributes.price,
         description: game.attributes.short_description
       },
       gallery: game.attributes.gallery.data.map((item) => ({

@@ -1177,12 +1177,12 @@ exports[`<Whishlist /> should render correctly 1`] = `
               <div
                 class="c48"
               >
-                R$ 235,00
+                $215.00
               </div>
               <div
                 class="c49"
               >
-                R$ 215,00
+                $115.00
               </div>
               <button
                 class="c50"
@@ -1273,12 +1273,12 @@ exports[`<Whishlist /> should render correctly 1`] = `
               <div
                 class="c48"
               >
-                R$ 235,00
+                $215.00
               </div>
               <div
                 class="c49"
               >
-                R$ 215,00
+                $115.00
               </div>
               <button
                 class="c50"
@@ -1369,12 +1369,12 @@ exports[`<Whishlist /> should render correctly 1`] = `
               <div
                 class="c48"
               >
-                R$ 235,00
+                $215.00
               </div>
               <div
                 class="c49"
               >
-                R$ 215,00
+                $115.00
               </div>
               <button
                 class="c50"

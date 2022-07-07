@@ -9,12 +9,12 @@ const props = {
   title: "Population Zero",
   developer: "Gearbox Software",
   img: "https://source.unsplash.com/user/willianjusten/300x140",
-  price: "$215,00"
+  price: 215.0
 };
 
 describe("<GameCard />", () => {
   it("should render correctly", async () => {
-    renderWithTheme(<GameCard {...props} />);
+    const { container } = renderWithTheme(<GameCard {...props} />);
 
     // await waitFor(() => {
     //   expect(screen.getByRole("img", { name: props.title })).toHaveAttribute(
@@ -36,36 +36,29 @@ describe("<GameCard />", () => {
       `/game/${props.slug}`
     );
 
-    expect(screen.getByText(props.price)).toBeInTheDocument();
-
     expect(screen.getByLabelText(/add to wishlist/i)).toBeInTheDocument();
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it("should render price in label", () => {
     renderWithTheme(<GameCard {...props} />);
 
-    const price = screen.getByText(props.price);
+    const price = screen.getByText("$215.00");
 
-    expect(price).not.toHaveStyle({
-      "text-decoration": "line-through",
-      color: theme.colors.gray
-    });
-    expect(price).toHaveStyle({
-      "background-color": theme.colors.secondary
-    });
+    expect(price).not.toHaveStyle({ textDecoration: "line-through" });
+    expect(price).toHaveStyle({ backgroundColor: theme.colors.secondary });
   });
 
   it("should render a line-through in price when promotinal", () => {
-    renderWithTheme(<GameCard {...props} promotionalPrice="$115,00" />);
+    renderWithTheme(<GameCard {...props} promotionalPrice={115.0} />);
 
-    expect(screen.getByText(props.price)).toHaveStyle({
-      "text-decoration": "line-through",
-      color: theme.colors.gray
+    expect(screen.getByText("$215.00")).toHaveStyle({
+      textDecoration: "line-through"
     });
 
-    expect(screen.getByText("$115,00")).not.toHaveStyle({
-      "text-decoration": "line-through",
-      color: theme.colors.gray
+    expect(screen.getByText("$115.00")).not.toHaveStyle({
+      textDecoration: "line-through"
     });
   });
 

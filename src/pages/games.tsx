@@ -1,7 +1,6 @@
 import GamesTemplate, { GamesTemplateProps } from "templates/Games";
 
 import { initializeApollo } from "utils/apollo";
-import { formatCurrency } from "utils/formatCurrency";
 
 import { QUERY_GAMES } from "graphql/queries/games";
 import filterItemsMock from "components/ExploreSidebar/mock";
@@ -26,7 +25,7 @@ export async function getStaticProps() {
     title: game.attributes.name,
     developer: game.attributes.developers.data[0].attributes!.name,
     img: `http://localhost:1337${game.attributes.cover!.data?.attributes?.url}`,
-    price: formatCurrency(game.attributes.price)
+    price: game.attributes.price
   }));
 
   return {
