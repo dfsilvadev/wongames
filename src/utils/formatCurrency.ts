@@ -1,4 +1,4 @@
-export const formatCurrency = (currency: number | undefined) =>
+export const formatCurrency = (currency: number | bigint): string =>
   currency == 0
     ? "FREE"
     : new Intl.NumberFormat("en", {
