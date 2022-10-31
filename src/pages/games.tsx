@@ -3,8 +3,9 @@ import GamesTemplate, { GamesTemplateProps } from "templates/Games";
 import { initializeApollo } from "utils/apollo";
 
 import { QUERY_GAMES } from "graphql/queries/games";
-import filterItemsMock from "components/ExploreSidebar/mock";
 import { queryGames, queryGamesVariables } from "graphql/generated/queryGames";
+
+import filterItemsMock from "components/ExploreSidebar/mock";
 
 export default function GamePage(props: GamesTemplateProps) {
   return <GamesTemplate {...props} />;
