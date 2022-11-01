@@ -42,8 +42,6 @@ const GameCard = ({
   ribbonColor = "primary",
   ribbonSize = "small"
 }: GameCardProps) => {
-  console.log(promotionalPrice);
-
   return (
     <S.Wrapper>
       {!!ribbon && (
