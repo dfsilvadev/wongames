@@ -34,9 +34,9 @@ export async function getStaticPaths() {
     }
   });
 
-  const paths = data.games.data.map((game) => ({
+  const paths = data.games.data.map(({ attributes }) => ({
     params: {
-      slug: game.attributes.slug
+      slug: attributes.slug
     }
   }));
 
