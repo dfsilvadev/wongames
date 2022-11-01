@@ -34,9 +34,9 @@ export async function getStaticPaths() {
     }
   });
 
-  const paths = data.games.data.map(({ attributes }) => ({
+  const paths = data.games.data.map(({ attributes: path }) => ({
     params: {
-      slug: attributes.slug
+      slug: path.slug
     }
   }));
 
@@ -69,20 +69,22 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         price: game.price,
         description: game.short_description
       },
-      gallery: game.gallery.data.map((item) => ({
-        src: `http://localhost:1337${item.attributes.src}`,
-        label: item.attributes.label
+      gallery: game.gallery.data.map(({ attributes: image }) => ({
+        src: `http://localhost:1337${image.src}`,
+        label: image.label
       })),
       description: game.description,
       details: {
         developer: game.developers.data[0].attributes.name,
         releaseDate: game.release_date,
         platforms: game.platforms.data.map(
-          (platform) => platform.attributes.name
+          ({ attributes: platform }) => platform.name
         ),
         publisher: game.publisher.data.attributes.name,
         rating: game.rating,
-        genres: game.categories.data.map((category) => category.attributes.name)
+        genres: game.categories.data.map(
+          ({ attributes: category }) => category.name
+        )
       },
       upcomingGames: gamesMock,
       upcomingHighlight: highlightMock,
