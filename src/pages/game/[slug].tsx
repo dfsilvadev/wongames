@@ -59,32 +59,30 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   if (!data.games.data.length) return { notFound: true };
 
-  const game = data.games.data[0];
+  const { attributes: game } = data.games.data[0];
 
   return {
     props: {
-      cover: `http://localhost:1337${game.attributes.cover.data.attributes.src}`,
+      cover: `http://localhost:1337${game.cover.data.attributes.src}`,
       gameInfo: {
-        title: game.attributes.name,
-        price: game.attributes.price,
-        description: game.attributes.short_description
+        title: game.name,
+        price: game.price,
+        description: game.short_description
       },
-      gallery: game.attributes.gallery.data.map((item) => ({
+      gallery: game.gallery.data.map((item) => ({
         src: `http://localhost:1337${item.attributes.src}`,
         label: item.attributes.label
       })),
-      description: game.attributes.description,
+      description: game.description,
       details: {
-        developer: game.attributes.developers.data[0].attributes.name,
-        releaseDate: game.attributes.release_date,
-        platforms: game.attributes.platforms.data.map(
+        developer: game.developers.data[0].attributes.name,
+        releaseDate: game.release_date,
+        platforms: game.platforms.data.map(
           (platform) => platform.attributes.name
         ),
-        publisher: game.attributes.publisher.data.attributes.name,
-        rating: game.attributes.rating,
-        genres: game.attributes.categories.data.map(
-          (category) => category.attributes.name
-        )
+        publisher: game.publisher.data.attributes.name,
+        rating: game.rating,
+        genres: game.categories.data.map((category) => category.attributes.name)
       },
       upcomingGames: gamesMock,
       upcomingHighlight: highlightMock,
