@@ -50,6 +50,11 @@ type ResponseCollectionMeta {
   pagination: Pagination!
 }
 
+enum PublicationState {
+  LIVE
+  PREVIEW
+}
+
 input IDFilterInput {
   and: [ID]
   or: [ID]
@@ -232,6 +237,42 @@ input JSONFilterInput {
   in: [JSON]
   notIn: [JSON]
   between: [JSON]
+}
+
+input ComponentPageButtonInput {
+  id: ID
+  label: String
+  link: String
+}
+
+type ComponentPageButton {
+  id: ID!
+  label: String!
+  link: String!
+}
+
+enum ENUM_COMPONENTPAGEROBBON_COLOR {
+  primary
+  secondary
+}
+
+enum ENUM_COMPONENTPAGEROBBON_SIZE {
+  small
+  normal
+}
+
+input ComponentPageRobbonInput {
+  id: ID
+  text: String
+  color: ENUM_COMPONENTPAGEROBBON_COLOR
+  size: ENUM_COMPONENTPAGEROBBON_SIZE
+}
+
+type ComponentPageRobbon {
+  id: ID!
+  text: String
+  color: ENUM_COMPONENTPAGEROBBON_COLOR
+  size: ENUM_COMPONENTPAGEROBBON_SIZE
 }
 
 input UploadFileFiltersInput {
@@ -474,6 +515,52 @@ type UsersPermissionsUserEntityResponseCollection {
 
 type UsersPermissionsUserRelationResponseCollection {
   data: [UsersPermissionsUserEntity!]!
+}
+
+input BannerFiltersInput {
+  id: IDFilterInput
+  title: StringFilterInput
+  subtitle: StringFilterInput
+  createdAt: DateTimeFilterInput
+  updatedAt: DateTimeFilterInput
+  publishedAt: DateTimeFilterInput
+  and: [BannerFiltersInput]
+  or: [BannerFiltersInput]
+  not: BannerFiltersInput
+}
+
+input BannerInput {
+  image: ID
+  title: String
+  subtitle: String
+  button: ComponentPageButtonInput
+  ribbon: ComponentPageRobbonInput
+  publishedAt: DateTime
+}
+
+type Banner {
+  image: UploadFileEntityResponse!
+  title: String!
+  subtitle: String!
+  button: ComponentPageButton
+  ribbon: ComponentPageRobbon
+  createdAt: DateTime
+  updatedAt: DateTime
+  publishedAt: DateTime
+}
+
+type BannerEntity {
+  id: ID
+  attributes: Banner
+}
+
+type BannerEntityResponse {
+  data: BannerEntity
+}
+
+type BannerEntityResponseCollection {
+  data: [BannerEntity!]!
+  meta: ResponseCollectionMeta!
 }
 
 input CategoryFiltersInput {
@@ -733,7 +820,7 @@ type PublisherEntityResponseCollection {
   meta: ResponseCollectionMeta!
 }
 
-union GenericMorph = UploadFile | I18NLocale | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser | Category | Developer | Game | Platform | Publisher
+union GenericMorph = ComponentPageButton | ComponentPageRobbon | UploadFile | I18NLocale | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser | Banner | Category | Developer | Game | Platform | Publisher
 
 input FileInfoInput {
   name: String
@@ -809,6 +896,8 @@ type Query {
   usersPermissionsRoles(filters: UsersPermissionsRoleFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): UsersPermissionsRoleEntityResponseCollection
   usersPermissionsUser(id: ID): UsersPermissionsUserEntityResponse
   usersPermissionsUsers(filters: UsersPermissionsUserFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): UsersPermissionsUserEntityResponseCollection
+  banner(id: ID): BannerEntityResponse
+  banners(filters: BannerFiltersInput, pagination: PaginationArg = {}, sort: [String] = [], publicationState: PublicationState = LIVE): BannerEntityResponseCollection
   category(id: ID): CategoryEntityResponse
   categories(filters: CategoryFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): CategoryEntityResponseCollection
   developer(id: ID): DeveloperEntityResponse
@@ -826,6 +915,9 @@ type Mutation {
   createUploadFile(data: UploadFileInput!): UploadFileEntityResponse
   updateUploadFile(id: ID!, data: UploadFileInput!): UploadFileEntityResponse
   deleteUploadFile(id: ID!): UploadFileEntityResponse
+  createBanner(data: BannerInput!): BannerEntityResponse
+  updateBanner(id: ID!, data: BannerInput!): BannerEntityResponse
+  deleteBanner(id: ID!): BannerEntityResponse
   createCategory(data: CategoryInput!): CategoryEntityResponse
   updateCategory(id: ID!, data: CategoryInput!): CategoryEntityResponse
   deleteCategory(id: ID!): CategoryEntityResponse

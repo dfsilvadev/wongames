@@ -16,23 +16,23 @@ export interface queryGameBySlug_games_data_attributes_cover_data_attributes {
 
 export interface queryGameBySlug_games_data_attributes_cover_data {
   __typename: "UploadFileEntity";
-  attributes: queryGameBySlug_games_data_attributes_cover_data_attributes;
+  attributes: queryGameBySlug_games_data_attributes_cover_data_attributes | null;
 }
 
 export interface queryGameBySlug_games_data_attributes_cover {
   __typename: "UploadFileEntityResponse";
-  data: queryGameBySlug_games_data_attributes_cover_data;
+  data: queryGameBySlug_games_data_attributes_cover_data | null;
 }
 
 export interface queryGameBySlug_games_data_attributes_gallery_data_attributes {
   __typename: "UploadFile";
   src: string;
-  label: string;
+  label: string | null;
 }
 
 export interface queryGameBySlug_games_data_attributes_gallery_data {
   __typename: "UploadFileEntity";
-  attributes: queryGameBySlug_games_data_attributes_gallery_data_attributes;
+  attributes: queryGameBySlug_games_data_attributes_gallery_data_attributes | null;
 }
 
 export interface queryGameBySlug_games_data_attributes_gallery {
@@ -47,7 +47,7 @@ export interface queryGameBySlug_games_data_attributes_developers_data_attribute
 
 export interface queryGameBySlug_games_data_attributes_developers_data {
   __typename: "DeveloperEntity";
-  attributes: queryGameBySlug_games_data_attributes_developers_data_attributes;
+  attributes: queryGameBySlug_games_data_attributes_developers_data_attributes | null;
 }
 
 export interface queryGameBySlug_games_data_attributes_developers {
@@ -62,12 +62,12 @@ export interface queryGameBySlug_games_data_attributes_publisher_data_attributes
 
 export interface queryGameBySlug_games_data_attributes_publisher_data {
   __typename: "PublisherEntity";
-  attributes: queryGameBySlug_games_data_attributes_publisher_data_attributes;
+  attributes: queryGameBySlug_games_data_attributes_publisher_data_attributes | null;
 }
 
 export interface queryGameBySlug_games_data_attributes_publisher {
   __typename: "PublisherEntityResponse";
-  data: queryGameBySlug_games_data_attributes_publisher_data;
+  data: queryGameBySlug_games_data_attributes_publisher_data | null;
 }
 
 export interface queryGameBySlug_games_data_attributes_categories_data_attributes {
@@ -77,7 +77,7 @@ export interface queryGameBySlug_games_data_attributes_categories_data_attribute
 
 export interface queryGameBySlug_games_data_attributes_categories_data {
   __typename: "CategoryEntity";
-  attributes: queryGameBySlug_games_data_attributes_categories_data_attributes;
+  attributes: queryGameBySlug_games_data_attributes_categories_data_attributes | null;
 }
 
 export interface queryGameBySlug_games_data_attributes_categories {
@@ -92,7 +92,7 @@ export interface queryGameBySlug_games_data_attributes_platforms_data_attributes
 
 export interface queryGameBySlug_games_data_attributes_platforms_data {
   __typename: "PlatformEntity";
-  attributes: queryGameBySlug_games_data_attributes_platforms_data_attributes;
+  attributes: queryGameBySlug_games_data_attributes_platforms_data_attributes | null;
 }
 
 export interface queryGameBySlug_games_data_attributes_platforms {
@@ -102,23 +102,23 @@ export interface queryGameBySlug_games_data_attributes_platforms {
 
 export interface queryGameBySlug_games_data_attributes {
   __typename: "Game";
-  cover: queryGameBySlug_games_data_attributes_cover;
+  cover: queryGameBySlug_games_data_attributes_cover | null;
   name: string;
   short_description: string;
   description: string;
   price: number;
-  rating: ENUM_GAME_RATING;
-  release_date: any;
-  gallery: queryGameBySlug_games_data_attributes_gallery;
-  developers: queryGameBySlug_games_data_attributes_developers;
-  publisher: queryGameBySlug_games_data_attributes_publisher;
-  categories: queryGameBySlug_games_data_attributes_categories;
-  platforms: queryGameBySlug_games_data_attributes_platforms;
+  rating: ENUM_GAME_RATING | null;
+  release_date: any | null;
+  gallery: queryGameBySlug_games_data_attributes_gallery | null;
+  developers: queryGameBySlug_games_data_attributes_developers | null;
+  publisher: queryGameBySlug_games_data_attributes_publisher | null;
+  categories: queryGameBySlug_games_data_attributes_categories | null;
+  platforms: queryGameBySlug_games_data_attributes_platforms | null;
 }
 
 export interface queryGameBySlug_games_data {
   __typename: "GameEntity";
-  attributes: queryGameBySlug_games_data_attributes;
+  attributes: queryGameBySlug_games_data_attributes | null;
 }
 
 export interface queryGameBySlug_games {
@@ -127,7 +127,7 @@ export interface queryGameBySlug_games {
 }
 
 export interface queryGameBySlug {
-  games: queryGameBySlug_games;
+  games: queryGameBySlug_games | null;
 }
 
 export interface queryGameBySlugVariables {
