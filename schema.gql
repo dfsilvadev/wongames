@@ -584,7 +584,7 @@ input CategoryInput {
 type Category {
   name: String!
   slug: String!
-  games(filters: GameFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): GameRelationResponseCollection
+  games(filters: GameFiltersInput, pagination: PaginationArg = {}, sort: [String] = [], publicationState: PublicationState = LIVE): GameRelationResponseCollection
   createdAt: DateTime
   updatedAt: DateTime
 }
@@ -628,7 +628,7 @@ input DeveloperInput {
 type Developer {
   name: String!
   slug: String!
-  games(filters: GameFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): GameRelationResponseCollection
+  games(filters: GameFiltersInput, pagination: PaginationArg = {}, sort: [String] = [], publicationState: PublicationState = LIVE): GameRelationResponseCollection
   createdAt: DateTime
   updatedAt: DateTime
 }
@@ -675,6 +675,7 @@ input GameFiltersInput {
   publisher: PublisherFiltersInput
   createdAt: DateTimeFilterInput
   updatedAt: DateTimeFilterInput
+  publishedAt: DateTimeFilterInput
   localizations: GameFiltersInput
   locale: StringFilterInput
   and: [GameFiltersInput]
@@ -696,6 +697,7 @@ input GameInput {
   developers: [ID]
   platforms: [ID]
   publisher: ID
+  publishedAt: DateTime
 }
 
 type Game {
@@ -714,7 +716,8 @@ type Game {
   publisher: PublisherEntityResponse
   createdAt: DateTime
   updatedAt: DateTime
-  localizations(filters: GameFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): GameRelationResponseCollection
+  publishedAt: DateTime
+  localizations(filters: GameFiltersInput, pagination: PaginationArg = {}, sort: [String] = [], publicationState: PublicationState = LIVE): GameRelationResponseCollection
   locale: String
 }
 
@@ -757,7 +760,7 @@ input PlatformInput {
 type Platform {
   name: String!
   slug: String!
-  games(filters: GameFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): GameRelationResponseCollection
+  games(filters: GameFiltersInput, pagination: PaginationArg = {}, sort: [String] = [], publicationState: PublicationState = LIVE): GameRelationResponseCollection
   createdAt: DateTime
   updatedAt: DateTime
 }
@@ -801,7 +804,7 @@ input PublisherInput {
 type Publisher {
   name: String!
   slug: String!
-  games(filters: GameFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): GameRelationResponseCollection
+  games(filters: GameFiltersInput, pagination: PaginationArg = {}, sort: [String] = [], publicationState: PublicationState = LIVE): GameRelationResponseCollection
   createdAt: DateTime
   updatedAt: DateTime
 }
@@ -903,7 +906,7 @@ type Query {
   developer(id: ID): DeveloperEntityResponse
   developers(filters: DeveloperFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): DeveloperEntityResponseCollection
   game(id: ID, locale: I18NLocaleCode): GameEntityResponse
-  games(filters: GameFiltersInput, pagination: PaginationArg = {}, sort: [String] = [], locale: I18NLocaleCode): GameEntityResponseCollection
+  games(filters: GameFiltersInput, pagination: PaginationArg = {}, sort: [String] = [], publicationState: PublicationState = LIVE, locale: I18NLocaleCode): GameEntityResponseCollection
   platform(id: ID): PlatformEntityResponse
   platforms(filters: PlatformFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): PlatformEntityResponseCollection
   publisher(id: ID): PublisherEntityResponse
