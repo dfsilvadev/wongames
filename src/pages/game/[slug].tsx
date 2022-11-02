@@ -34,9 +34,9 @@ export async function getStaticPaths() {
     }
   });
 
-  const paths = data.games.data.map(({ attributes: path }) => ({
+  const paths = data.games?.data.map(({ attributes: path }) => ({
     params: {
-      slug: path.slug
+      slug: path?.slug
     }
   }));
 
@@ -57,33 +57,33 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   });
 
-  if (!data.games.data.length) return { notFound: true };
+  if (!data.games?.data.length) return { notFound: true };
 
   const { attributes: game } = data.games.data[0];
 
   return {
     props: {
-      cover: `http://localhost:1337${game.cover.data.attributes.src}`,
+      cover: `http://localhost:1337${game?.cover?.data?.attributes?.src}`,
       gameInfo: {
-        title: game.name,
-        price: game.price,
-        description: game.short_description
+        title: game?.name,
+        price: game?.price,
+        description: game?.short_description
       },
-      gallery: game.gallery.data.map(({ attributes: image }) => ({
-        src: `http://localhost:1337${image.src}`,
-        label: image.label
+      gallery: game?.gallery?.data.map(({ attributes: image }) => ({
+        src: `http://localhost:1337${image?.src}`,
+        label: image?.label
       })),
-      description: game.description,
+      description: game?.description,
       details: {
-        developer: game.developers.data[0].attributes.name,
-        releaseDate: game.release_date,
-        platforms: game.platforms.data.map(
-          ({ attributes: platform }) => platform.name
+        developer: game?.developers?.data[0].attributes?.name,
+        releaseDate: game?.release_date,
+        platforms: game?.platforms?.data.map(
+          ({ attributes: platform }) => platform?.name
         ),
-        publisher: game.publisher.data.attributes.name,
-        rating: game.rating,
-        genres: game.categories.data.map(
-          ({ attributes: category }) => category.name
+        publisher: game?.publisher?.data?.attributes?.name,
+        rating: game?.rating,
+        genres: game?.categories?.data.map(
+          ({ attributes: category }) => category?.name
         )
       },
       upcomingGames: gamesMock,
