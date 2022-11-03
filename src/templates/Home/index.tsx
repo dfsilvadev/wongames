@@ -11,22 +11,30 @@ import * as S from "./styles";
 
 export type HomeTemplateProps = {
   banners: BannerProps[];
+  newGamesTitle: string;
   newGames: GameCardProps[];
+  mostPopularGamesTitle: string;
   mostPopularHighlight: HighlightProps;
   mostPopularGames: GameCardProps[];
+  upcomingGamesTitle: string;
   upcommingGames: GameCardProps[];
   upcommingHighlight: HighlightProps;
+  freeGamesTitle: string;
   freeGames: GameCardProps[];
   freeHighlight: HighlightProps;
 };
 
 const Home = ({
   banners,
+  newGamesTitle,
   newGames,
+  mostPopularGamesTitle,
   mostPopularHighlight,
   mostPopularGames,
+  upcomingGamesTitle,
   upcommingGames,
   upcommingHighlight,
+  freeGamesTitle,
   freeGames,
   freeHighlight
 }: HomeTemplateProps) => {
@@ -39,23 +47,23 @@ const Home = ({
       </Container>
 
       <S.SectionNews>
-        <Showcase title="News" games={newGames} color="black" />
+        <Showcase title={newGamesTitle} games={newGames} color="black" />
       </S.SectionNews>
 
       <Showcase
-        title="Most Popular"
+        title={mostPopularGamesTitle}
         highlight={mostPopularHighlight}
         games={mostPopularGames}
       />
 
       <Showcase
-        title="Upcoming"
+        title={upcomingGamesTitle}
         highlight={upcommingHighlight}
         games={upcommingGames}
       />
 
       <Showcase
-        title="Free games"
+        title={freeGamesTitle}
         highlight={freeHighlight}
         games={freeGames}
       />

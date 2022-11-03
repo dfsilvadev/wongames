@@ -1,12 +1,10 @@
 import { initializeApollo } from "utils/apollo";
+import { bannerMapper, gamesMapper, highlightMapper } from "utils/mappers";
 
 import Home, { HomeTemplateProps } from "templates/Home";
 
-import gamesMock from "components/GameCardSlider/mock";
-import highlightMock from "components/Highlight/mock";
-
 import { QUERY_HOME } from "graphql/queries/home";
-import { queryHome } from "graphql/generated/queryHome";
+import { queryHome, queryHomeVariables } from "graphql/generated/queryHome";
 
 export default function Index(props: HomeTemplateProps) {
   return <Home {...props} />;
@@ -14,36 +12,40 @@ export default function Index(props: HomeTemplateProps) {
 
 export async function getStaticProps() {
   const apolloClient = initializeApollo();
+  const TODAY = new Date().toISOString().slice(0, 10);
 
-  const { data } = await apolloClient.query<queryHome>({
-    query: QUERY_HOME
+  const {
+    data: { banners, newGames, upcomingGames, freeGames, sections }
+  } = await apolloClient.query<queryHome, queryHomeVariables>({
+    query: QUERY_HOME,
+    variables: {
+      date: TODAY
+    }
   });
-
-  const banners = data.banners?.data.map(({ attributes: banner }) => ({
-    img: `http://localhost:1337${banner?.image.data?.attributes?.url}`,
-    title: banner?.title,
-    subtitle: banner?.subtitle,
-    buttonLabel: banner?.button?.label,
-    buttonLink: banner?.button?.link,
-    ...(banner?.ribbon && {
-      ribbon: banner.ribbon.text,
-      ribbonColor: banner.ribbon.color,
-      ribbonSize: banner.ribbon.size
-    })
-  }));
 
   return {
     props: {
-      banners,
-      newGames: gamesMock,
-      mostPopularHighlight: highlightMock,
-      mostPopularGames: gamesMock,
-      upcommingGames: gamesMock,
-      upcommingHighlight: highlightMock,
-      upcommingMoreGames: gamesMock,
-      freeGames: gamesMock,
-      freeHighlight: highlightMock,
-      revalidate: 60 * 60 //1 hour
+      banners: bannerMapper(banners!),
+      newGamesTitle: sections?.data?.attributes?.newGames?.title,
+      newGames: gamesMapper(newGames!),
+      mostPopularGamesTitle: sections?.data?.attributes?.popularGames?.title,
+      mostPopularHighlight: highlightMapper(
+        sections?.data?.attributes?.popularGames?.highlight
+      ),
+      mostPopularGames: gamesMapper(
+        sections!.data!.attributes!.popularGames!.games!
+      ),
+      upcomingGamesTitle: sections?.data?.attributes?.upcomingGames?.title,
+      upcommingGames: gamesMapper(upcomingGames!),
+      upcommingHighlight: highlightMapper(
+        sections?.data?.attributes?.upcomingGames?.highlight
+      ),
+      freeGamesTitle: sections?.data?.attributes?.freeGames?.title,
+      freeGames: gamesMapper(freeGames!),
+      freeHighlight: highlightMapper(
+        sections?.data?.attributes?.freeGames?.highlight
+      ),
+      revalidate: 60 //60 seconds
     }
   };
 }
