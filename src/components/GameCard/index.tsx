@@ -42,6 +42,8 @@ const GameCard = ({
   ribbonColor = "primary",
   ribbonSize = "small"
 }: GameCardProps) => {
+  const currency = formatCurrency(promotionalPrice! || price);
+
   return (
     <S.Wrapper>
       {!!ribbon && (
@@ -76,7 +78,7 @@ const GameCard = ({
             <S.Price isPromotional>{formatCurrency(price)}</S.Price>
           )}
 
-          <S.Price>{formatCurrency(promotionalPrice! || price)}</S.Price>
+          <S.Price>{currency == "$0.00" ? "FREE" : currency}</S.Price>
 
           <Button icon={<AddShoppingCart />} size="small" />
         </S.BuyBox>
