@@ -13,6 +13,7 @@ const settings: SliderSettings = {
   vertical: true,
   verticalSwiping: true,
   infinite: false,
+  autoplay: true,
   responsive: [
     {
       breakpoint: 1170,
