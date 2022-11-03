@@ -1116,7 +1116,7 @@ exports[`<Whishlist /> should render correctly 1`] = `
         >
           <a
             class="c41"
-            href="/game/undefined"
+            href="/game/population-zero"
           >
             <span
               style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
@@ -1136,7 +1136,7 @@ exports[`<Whishlist /> should render correctly 1`] = `
           >
             <a
               class="c43"
-              href="/game/undefined"
+              href="/game/population-zero"
             >
               <h3
                 class="c44"
@@ -1212,7 +1212,7 @@ exports[`<Whishlist /> should render correctly 1`] = `
         >
           <a
             class="c41"
-            href="/game/undefined"
+            href="/game/population-zero"
           >
             <span
               style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
@@ -1232,7 +1232,7 @@ exports[`<Whishlist /> should render correctly 1`] = `
           >
             <a
               class="c43"
-              href="/game/undefined"
+              href="/game/population-zero"
             >
               <h3
                 class="c44"
@@ -1308,7 +1308,7 @@ exports[`<Whishlist /> should render correctly 1`] = `
         >
           <a
             class="c41"
-            href="/game/undefined"
+            href="/game/population-zero"
           >
             <span
               style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
@@ -1328,7 +1328,7 @@ exports[`<Whishlist /> should render correctly 1`] = `
           >
             <a
               class="c43"
-              href="/game/undefined"
+              href="/game/population-zero"
             >
               <h3
                 class="c44"
