@@ -9,6 +9,7 @@ export const QUERY_RECOMMENDED = gql`
       data {
         attributes {
           section {
+            title
             highlight {
               ...HighlightFragment
             }
