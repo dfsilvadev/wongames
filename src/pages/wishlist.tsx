@@ -1,10 +1,10 @@
 import Whishlist, { WishlistTemplateProps } from "templates/Wishlist";
 
+import { initializeApollo } from "utils/apollo";
+import { gamesMapper, highlightMapper } from "utils/mappers";
+
 import { QUERY_RECOMMENDED } from "graphql/queries/recommended";
 import { queryRecommended } from "graphql/generated/queryRecommended";
-import { initializeApollo } from "utils/apollo";
-
-import { gamesMapper, highlightMapper } from "utils/mappers";
 
 export default function WishlistPage(props: WishlistTemplateProps) {
   return <Whishlist {...props} />;
