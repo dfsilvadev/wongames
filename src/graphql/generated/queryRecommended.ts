@@ -101,7 +101,7 @@ export interface queryRecommended_recommended_data_attributes_section_games {
 
 export interface queryRecommended_recommended_data_attributes_section {
   __typename: "ComponentPagePopularGames";
-  title: string;
+  title: string | null;
   highlight: queryRecommended_recommended_data_attributes_section_highlight | null;
   games: queryRecommended_recommended_data_attributes_section_games | null;
 }
