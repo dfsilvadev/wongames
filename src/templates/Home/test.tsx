@@ -16,8 +16,8 @@ const props = {
   mostPopularHighlight: highlightMock,
   mostPopularGames: [gamesMock[0]],
   upcomingGamesTitle: "Upcoming",
-  upcommingGames: [gamesMock[0]],
-  upcommingHighlight: highlightMock,
+  upcomingGames: [gamesMock[0]],
+  upcomingHighlight: highlightMock,
   freeGamesTitle: "Free Games",
   freeGames: [gamesMock[0]],
   freeHighlight: highlightMock
